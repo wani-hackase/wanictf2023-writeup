@@ -1,0 +1,9 @@
+version: "3"
+services:
+  dsa:
+    build: ./src
+    environment:
+      - FLAG=FLAG{trivial&baby_dsa_puzzle}
+    ports:
+      - 50010:50000
+    restart: always

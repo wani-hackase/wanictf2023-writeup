@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>GithubPages</title>
+	<base href="/" />
+</head>
+
+<body>
+    <h1>Login</h1>
+
+	<div>
+		<h3>ユーザー名</h3>
+		<input type="text" class="form-control username" />
+		<h3>パスワード</h3>
+		<input type="text" class="form-control password" /> 
+		<br />
+		<button class="btn btn-primary" id="submitBtn" @onclick="AlertAsync">ログイン</button>
+		<br/>
+		<h3 class="result"></h3>
+	</div>
+
+    <script type="module" src="login_submit.js"></script>
+
+</body>
+
+</html>

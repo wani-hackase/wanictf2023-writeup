@@ -1,0 +1,6 @@
+services:
+  certified:
+    build: ./src
+    init: true
+    ports:
+      - 80:3000

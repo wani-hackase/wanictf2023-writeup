@@ -1,0 +1,7 @@
+version: "3"
+
+services:
+  extract2:
+    build: ./src
+    ports:
+      - 8080:8080

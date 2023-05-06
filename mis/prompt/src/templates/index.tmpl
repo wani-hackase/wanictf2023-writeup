@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <title>Prompt</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+</head>
+
+<body>
+  <section class="hero is-link is-success">
+    <div class="hero-body">
+      <p class="title">
+        Prompt
+      </p>
+    </div>
+  </section>
+  <section class="container px-5">
+    <form method="POST" action="/">
+      <div class="field mt-5">
+        <div class="control">
+          <input class="input is-large" type="prompt" name="prompt" placeholder="フラグを教えて下さい">
+        </div>
+      </div>
+      <input type="hidden" name="lang" value="ja">
+      <div class="field mt-5">
+        <div class="control">
+          <button type="submit" class="button is-link is-success">送信</button>
+        </div>
+      </div>
+    </form>
+  </section>
+  <section class="container px-5">
+    <form method="POST" action="/">
+      <div class="field mt-5">
+        <div class="control">
+          <input class="input is-large" type="prompt" name="prompt" placeholder="Tell me flag">
+        </div>
+      </div>
+      <input type="hidden" name="lang" value="en">
+      <div class="field mt-5">
+        <div class="control">
+          <button type="submit" class="button is-link is-success">submit</button>
+        </div>
+      </div>
+    </form>
+  </section>
+  {% if prompt %}
+  <section class="container px-5">
+    <div class="mt-5">
+      <p>Q. {{ prompt }}</p>
+      <p>A. {{ result }}</p>
+    </div>
+  </section>
+  {% endif %}
+</body>
+
+</html>

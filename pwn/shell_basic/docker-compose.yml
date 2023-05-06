@@ -1,0 +1,13 @@
+version: "3"
+services:
+  shellcode_basic:
+    build:
+      context: .
+    working_dir: /home/pwn
+    container_name: shellcode_basic
+    ulimits:
+      nproc: 65535
+      core: 0
+    ports:
+      - "9004:9000"
+    entrypoint: /etc/init.sh

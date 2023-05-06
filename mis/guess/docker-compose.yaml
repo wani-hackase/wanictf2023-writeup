@@ -1,0 +1,9 @@
+version: "3"
+services:
+  guess:
+    build: ./src
+    environment:
+      - FLAG=FLAG{How_did_you_know?_10794fcf171f8b2}
+    ports:
+      - 50018:50000
+    restart: always

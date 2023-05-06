@@ -1,0 +1,5 @@
+services:
+  64bps:
+    build: ./src
+    ports:
+      - 80:80

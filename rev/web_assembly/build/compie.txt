@@ -1,0 +1,1 @@
+em++ CheckPassword.cpp -s EXPORT_ES6=1 -sMODULARIZE -s EXPORT_NAME="MyModule" -o module.js  -sEXPORTED_RUNTIME_METHODS=['ccall','UTF8ToString','allocate','intArrayFromString'] -sEXPORTED_FUNCTIONS=['_check'] -sERROR_ON_UNDEFINED_SYMBOLS=0

@@ -1,0 +1,13 @@
+version: "3"
+services:
+  beginners_rop:
+    build:
+      context: .
+    working_dir: /home/pwn
+    container_name: beginners_rop
+    ulimits:
+      nproc: 65535
+      core: 0
+    ports:
+      - "9005:9000"
+    entrypoint: /etc/init.sh

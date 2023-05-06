@@ -1,0 +1,6 @@
+services:
+  screenshot:
+    build: ./src
+    init: true
+    ports:
+      - 80:80

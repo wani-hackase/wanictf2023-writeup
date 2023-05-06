@@ -1,0 +1,10 @@
+version: "3.1"
+
+services:
+  app:
+    build: ./
+    environment:
+      SECRET: OPENAI_ACCESS_KEY
+      FLAG: FAKE{FAKE_FLAG}
+    ports:
+      - 8080:8080

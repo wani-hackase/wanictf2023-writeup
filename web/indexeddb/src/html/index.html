@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+  </head>
+
+  <body>
+  </body>
+  <script>
+    var connection;
+
+    window.onload = function () {
+      var openRequest = indexedDB.open("testDB");
+
+      openRequest.onupgradeneeded = function () {
+        connection = openRequest.result;
+        var objectStore = connection.createObjectStore("testObjectStore", {
+          keyPath: "name",
+        });
+        objectStore.put({ name: "FLAG{y0u_c4n_u3e_db_1n_br0wser}" });
+      };
+
+      openRequest.onsuccess = function () {
+        connection = openRequest.result;
+      };
+      window.location = "1ndex.html";
+    };
+  </script>
+</html>

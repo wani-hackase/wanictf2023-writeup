@@ -1,0 +1,1 @@
+FLAG{Use_0ther_extens10n_such_as_safetensors}

@@ -1,0 +1,13 @@
+version: "3"
+services:
+  ret2libc:
+    build:
+      context: .
+    working_dir: /home/pwn
+    container_name: ret2libc
+    ulimits:
+      nproc: 65535
+      core: 0
+    ports:
+      - "9007:9000"
+    entrypoint: /etc/init.sh
